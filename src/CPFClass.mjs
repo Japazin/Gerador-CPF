@@ -1,4 +1,4 @@
-export  default class ValidaCPF {
+export default class ValidaCPF {
   constructor(cpf) {
     Object.defineProperty(this, "cpflimpo", {
       writable: true,
@@ -19,7 +19,7 @@ export  default class ValidaCPF {
       ? "CPF inválido!!"
       : "CPF Válido!!";
   }
- static calculo9digitos(cpfarray) {
+  static calculo9digitos(cpfarray) {
     let cpf9 = cpfarray.slice(0, 9);
     let contadoor = cpf9.length + 2;
     cpf9 = cpf9.reduce(function (acul, valor) {
@@ -30,7 +30,7 @@ export  default class ValidaCPF {
     cpf9 < 2 ? (cpf9 = 0) : (cpf9 = 11 - cpf9); //verificando se é menor que 2 e retornando 0 se verdadeiro
     return cpf9;
   }
-  static calculo10digitos(cpfarray) {
+ static  calculo10digitos(cpfarray) {
     let cpf10 = cpfarray.slice(0, 10);
     let contadoor = cpf10.length + 2;
     cpf10 = cpf10.reduce(function (acul, valor) {
