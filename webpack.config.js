@@ -2,7 +2,7 @@ const path = require('path');//common JS
 
 module.exports = {
   mode: 'development',
-  entry: './src/geracpf.mjs',
+  entry: './src/geracpf.js',
   output: {
     path: path.resolve(__dirname, 'public', 'assets', 'js'),
     filename: 'bundle.js'
